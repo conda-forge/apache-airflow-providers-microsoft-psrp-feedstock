@@ -9,6 +9,10 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/apache-airflow-
 
 Summary: Provider for Apache Airflow. Implements apache-airflow-providers-microsoft-psrp package
 
+Development: https://github.com/apache/airflow/
+
+Documentation: https://airflow.apache.org/docs/apache-airflow-providers-microsoft-psrp/stable/index.html
+
 Current build status
 ====================
 
