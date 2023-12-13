@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-microsoft-psrp" %}
-{% set version = "2.4.0" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/apache-airflow-providers-microsoft-psrp-{{ version }}.tar.gz
-  sha256: c3606d195388a8237936d63a1d63f582d6cc8091fb56ec21c8e2502af7c7c1db
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 199a682ec782bb2aa5a1c45561815811baebddd59a92db98c1e2304908d9dc14
 
 build:
   noarch: python
@@ -16,30 +16,27 @@ build:
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools >=67.2.0,<68.0.0
+    - python >=3.8,<4.dev0
+    - flit-core >=3.2,<4
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.5.0
+    - apache-airflow >=2.6.0
     - pypsrp >=0.8.0
 
 test:
   imports:
     - airflow.providers.microsoft.psrp
-    - airflow.providers.microsoft.psrp.hooks
   commands:
     - pip check
   requires:
     - pip
 
 about:
-  home: https://airflow.apache.org/
-  summary: Provider for Apache Airflow. Implements apache-airflow-providers-microsoft-psrp package
+  home: https://github.com/apache/airflow/
+  summary: Provider package apache-airflow-providers-microsoft-psrp for Apache Airflow
   license: Apache-2.0
-  license_file:
-    - LICENSE
-    - NOTICE
+  license_file: airflow/providers/microsoft/psrp/LICENSE
   license_family: Apache
   doc_url: https://airflow.apache.org/docs/apache-airflow-providers-microsoft-psrp/stable/index.html
   dev_url: https://github.com/apache/airflow/
