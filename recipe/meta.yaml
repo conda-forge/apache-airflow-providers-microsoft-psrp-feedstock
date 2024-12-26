@@ -1,13 +1,13 @@
 {% set name = "apache-airflow-providers-microsoft-psrp" %}
-{% set version = "2.8.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: d7039efc41db2d519be00f916ef08358108fb8dcf9e9856290c4b0aca6441c70
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 2afeacdf0d24d085b49a7f53c223231e4c1d73f0e0d205bcf5478c7278d194a4
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - apache-airflow >=2.8.0
+    - apache-airflow >=2.9.0
     - pypsrp >=0.8.0
 
 test:
