@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-psrp" %}
-{% set version = "3.1.1" %}
+{% set version = "3.1.2" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_psrp-{{ version }}.tar.gz
-  sha256: 92da6c95ca52b10e62ed614d237c6087181521bf59e9c8e80acb30f30c7bdec3
+  sha256: 7b0866dddfa980e7328cd0a517f40309aff8dba28e46371f145ae691dc4bac7f
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - flit-core ==3.12.0
     - pip
   run:
-    - python >={{ python_min }},<4.dev0
+    - python >={{ python_min }}
     - apache-airflow >=2.10.0
     - pypsrp >=0.8.0
 
