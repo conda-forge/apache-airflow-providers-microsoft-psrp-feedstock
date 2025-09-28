@@ -1,5 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-psrp" %}
-{% set version = "3.1.3" %}
+{% set version = "3.1.4" %}
 {% set python_min = "3.10" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_psrp-{{ version }}.tar.gz
-  sha256: 5cd55f1424b10431d57bf00fb43eae44cf713c86624ecbe30f9877858547800c
+  sha256: b603e3a0a6a393fac8f35c79441aa014b8ea3797ca4b59e510f6ba5764c6498e
 
 build:
   noarch: python
