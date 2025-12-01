@@ -1,6 +1,5 @@
 {% set name = "apache-airflow-providers-microsoft-psrp" %}
-{% set version = "3.1.6" %}
-{% set python_min = "3.10" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/apache_airflow_providers_microsoft_psrp-{{ version }}.tar.gz
-  sha256: 84f4b9870123b523b933309e1f864c81a7373886a4fd6393078a005015f42657
+  sha256: a22dea6b2e7ac9e1fc80754dd9875d4992e8f2ccc4144a1d22c7f08abedb14ba
 
 build:
   noarch: python
@@ -22,7 +21,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - apache-airflow >=2.10.0
+    - apache-airflow >=2.11.0
     - apache-airflow-providers-common-compat >=1.8.0
     - pypsrp >=0.8.0
 
@@ -39,7 +38,7 @@ about:
   home: https://github.com/apache/airflow/
   summary: Provider package apache-airflow-providers-microsoft-psrp for Apache Airflow
   license: Apache-2.0
-  license_file: 
+  license_file:
     - LICENSE
     - NOTICE
   license_family: Apache
