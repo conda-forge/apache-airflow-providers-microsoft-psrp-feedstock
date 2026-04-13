@@ -1,6 +1,6 @@
 context:
   name: apache-airflow-providers-microsoft-psrp
-  version: "3.2.4"
+  version: "3.2.5"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/apache_airflow_providers_microsoft_psrp-${{ version }}.tar.gz
-  sha256: 1a4eeb9909ac3feed0537be2a867147085652eadc19cd15fb6d47166ad4e4822
+  sha256: de86cf8c19d908429de907b494277e95c5ccaeaeb1356572220a02a9c80b0dd6
 
 build:
   noarch: python
@@ -31,7 +31,9 @@ tests:
       imports:
         - airflow.providers.microsoft.psrp
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   homepage: https://github.com/apache/airflow/
